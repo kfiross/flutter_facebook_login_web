@@ -1,0 +1,28 @@
+name: flutter_facebook_login_web
+description: A Flutter plugin for using the native Facebook Login SDKs on Web.
+version: 0.1.0
+homepage: https://github.com/kfiross/flutter_facebook_login_web
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+
+  # For supporting web sdk and js-dart interop
+  js: ^0.6.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      web:
+        pluginClass: FlutterLoginFacebookWebPlugin
+        fileName: web_plugin.dart
