@@ -17,9 +17,6 @@ class FacebookLoginWeb {
       'permissions': permissions,
     });
 
-    print(20);
-    print(map);
-
     return FacebookLoginResult._(map);
   }
 

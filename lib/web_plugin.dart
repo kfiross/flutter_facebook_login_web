@@ -51,9 +51,9 @@ class FlutterLoginFacebookWebPlugin {
     var permissions = call.arguments['permissions'];
     var results = await promiseToFuture(_jsClient.login(permissions));
 
-    print(results);
+
     Map resultsMap = json.decode(results);
-    print(resultsMap);
+
     return resultsMap;
   }
 
