@@ -1,6 +1,6 @@
 # flutter_facebook_login_web
 
-A Flutter plugin for using the JS Facebook Login SDK on Android and iOS.
+A Flutter plugin for using the JS Facebook Login SDK with Flutter Web.
 
 ## Web integration
 
