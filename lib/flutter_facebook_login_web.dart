@@ -4,13 +4,10 @@ import 'package:flutter/services.dart';
 
 import 'src/clock.dart';
 
-
-
 class FacebookLoginWeb {
   static const MethodChannel _channel =
       const MethodChannel(//'com.roughike/flutter_facebook_login');
-         'flutter_facebook_login_web');
-
+          'flutter_facebook_login_web');
 
   Future<FacebookLoginResult> logIn(List<String> permissions) async {
     var map = await _channel.invokeMethod('login', {
@@ -28,7 +25,6 @@ class FacebookLoginWeb {
     return await _channel.invokeMethod('logout');
   }
 }
-
 
 /// The result when the Facebook login flow has completed.
 ///
@@ -63,8 +59,8 @@ class FacebookLoginResult {
       : status = _parseStatus(map['status']),
         accessToken = map['accessToken'] != null
             ? FacebookAccessToken.fromMap(
-          map['accessToken'].cast<String, dynamic>(),
-        )
+                map['accessToken'].cast<String, dynamic>(),
+              )
             : null,
         errorMessage = map['errorMessage'] ?? '';
 

@@ -12,18 +12,18 @@ class FacebookLogin {
   external logout();
 }
 
-class FacebookLoginJsClient{
+class FacebookLoginJsClient {
   var _client = FacebookLogin();
 
-  login([permissions]){
+  login([permissions]) {
     return _client.login(permissions);
   }
 
-  testAPI(){
+  testAPI() {
     return _client.testAPI();
   }
 
-  logout(){
+  logout() {
     return _client.logout();
   }
 }
