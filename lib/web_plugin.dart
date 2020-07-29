@@ -72,9 +72,9 @@ class FlutterLoginFacebookWebPlugin {
     return result;
   }
 
-  Future _getCurrentAccessToken(MethodCall call) async{
+  Future _getCurrentAccessToken(MethodCall call) async {
     var results = await promiseToFuture(_jsClient.getAccessToken());
 
-    return results==null ? null : json.decode(results);
+    return results == null ? null : json.decode(results);
   }
 }

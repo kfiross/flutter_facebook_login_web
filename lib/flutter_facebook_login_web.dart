@@ -34,7 +34,6 @@ class FacebookLoginWeb {
     return (await currentAccessToken)?.isValid() ?? false;
   }
 
-
   Future<FacebookAccessToken> get currentAccessToken async {
     Map accessToken = await _channel.invokeMethod('getCurrentAccessToken');
 

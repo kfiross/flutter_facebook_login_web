@@ -28,7 +28,7 @@ class FacebookLoginJsClient {
     return _client.logout();
   }
 
-  getAccessToken(){
+  getAccessToken() {
     return _client.getAccessToken();
   }
 }
