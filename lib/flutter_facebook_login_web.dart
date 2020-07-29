@@ -24,6 +24,25 @@ class FacebookLoginWeb {
   Future logOut() async {
     return await _channel.invokeMethod('logout');
   }
+
+  /// Returns whether the user is currently logged in and the access token is
+  /// still valid or not.
+  ///
+  /// Convenience method for checking if the [currentAccessToken] is null and not
+  /// expired.
+  Future<bool> get isLoggedIn async {
+    return (await currentAccessToken)?.isValid() ?? false;
+  }
+
+
+  Future<FacebookAccessToken> get currentAccessToken async {
+    Map accessToken = await _channel.invokeMethod('getCurrentAccessToken');
+
+    if (accessToken == null) {
+      return null;
+    }
+    return FacebookAccessToken.fromMap(accessToken.cast<String, dynamic>());
+  }
 }
 
 /// The result when the Facebook login flow has completed.

@@ -10,6 +10,7 @@ class FacebookLogin {
   external login(permissions);
   external testAPI();
   external logout();
+  external getAccessToken();
 }
 
 class FacebookLoginJsClient {
@@ -25,5 +26,9 @@ class FacebookLoginJsClient {
 
   logout() {
     return _client.logout();
+  }
+
+  getAccessToken(){
+    return _client.getAccessToken();
   }
 }

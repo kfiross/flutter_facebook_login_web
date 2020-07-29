@@ -35,6 +35,10 @@ class FlutterLoginFacebookWebPlugin {
 
       case 'logout':
         return _logout(call);
+
+      case 'getCurrentAccessToken':
+        return _getCurrentAccessToken(call);
+
       default:
         throw PlatformException(
             code: 'Unimplemented',
@@ -66,5 +70,11 @@ class FlutterLoginFacebookWebPlugin {
     var result = await promiseToFuture(_jsClient.logout());
 
     return result;
+  }
+
+  Future _getCurrentAccessToken(MethodCall call) async{
+    var results = await promiseToFuture(_jsClient.getAccessToken());
+
+    return results==null ? null : json.decode(results);
   }
 }
