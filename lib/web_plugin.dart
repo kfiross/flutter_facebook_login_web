@@ -8,7 +8,7 @@ import 'src/interop.dart';
 
 const pluginName = 'flutter_facebook_login_web';
 
-class FlutterLoginFacebookWebPlugin {
+class FlutterFacebookLoginWebPlugin {
   var _jsClient = FacebookLoginJsClient();
 
   static void registerWith(Registrar registrar) {
@@ -17,8 +17,8 @@ class FlutterLoginFacebookWebPlugin {
       const StandardMethodCodec(),
       registrar.messenger,
     );
-    final FlutterLoginFacebookWebPlugin instance =
-        FlutterLoginFacebookWebPlugin();
+    final FlutterFacebookLoginWebPlugin instance =
+        FlutterFacebookLoginWebPlugin();
     channel.setMethodCallHandler(instance.handleMethodCall);
   }
 

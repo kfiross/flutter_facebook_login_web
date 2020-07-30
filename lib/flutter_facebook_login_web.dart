@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 
 import 'src/clock.dart';
 
-class FlutterFacebookLoginWebPlugin {
+class FacebookLoginWeb {
   static const MethodChannel _channel =
       const MethodChannel(//'com.roughike/flutter_facebook_login');
           'flutter_facebook_login_web');
