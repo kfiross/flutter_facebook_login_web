@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 temp fake flutter_login_facebook_web plugin
                        DESC
-  s.homepage         = 'https://github.com/flutter/plugins/tree/master/packages/image_picker/image_picker_for_web'
+  s.homepage         = ''
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Kfir Matityahu' => 'kfir25812@gmail.com' }
   s.source           = { :path => '.' }
