@@ -1,23 +1,21 @@
 #
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html.
-# Run `pod lib lint flutter_login_facebook_web.podspec' to validate before publishing.
+# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_login_facebook_web'
-  s.version          = '0.1.0'
-  s.summary          = 'A new Flutter plugin.'
+  s.version          = '0.2.0'
+  s.summary          = 'No-op implementation of flutter_login_facebook_web plugin to avoid build issues on iOS'
   s.description      = <<-DESC
-A new Flutter plugin.
+temp fake flutter_login_facebook_web plugin
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/flutter/plugins/tree/master/packages/image_picker/image_picker_for_web'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'kfir25812@gmail.com' }
+  s.author           = { 'Kfir Matityahu' => 'kfir25812@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
+  s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.platform = :ios, '11.0'
 
-  # Flutter.framework does not contain a i386 slice. Only x86_64 simulators are supported.
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }
-  s.swift_version = '5.0'
+  s.ios.deployment_target = '8.0'
 end
+
