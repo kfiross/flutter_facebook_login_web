@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 temp fake flutter_login_facebook_web plugin
                        DESC
-  s.homepage         = ''
+  s.homepage         = 'https://github.com/kfiross/flutter_facebook_login_web'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Kfir Matityahu' => 'kfir25812@gmail.com' }
   s.source           = { :path => '.' }
