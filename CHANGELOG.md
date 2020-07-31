@@ -1,3 +1,6 @@
+## 0.2.0+2
+* added fake ios plugin
+
 ## 0.2.0
 * added `isLogged` and `getCurrentAccessToken` functions
 * fixed bug with `FB.logout()` routine
