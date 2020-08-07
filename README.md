@@ -4,6 +4,7 @@ A Flutter plugin for using the JS Facebook Login SDK with Flutter Web.
 
 ## Web integration
 
+NOTE: Facebook only allows <b>https</b> URLs.<br>
 At the start of `body` tag in `web\index.html` add:
 ```html
  

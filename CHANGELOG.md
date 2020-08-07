@@ -1,3 +1,6 @@
+## 0.2.1
+* fixed bug with type error
+
 ## 0.2.0+2
 * added fake ios plugin
 
