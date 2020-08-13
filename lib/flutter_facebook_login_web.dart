@@ -6,15 +6,14 @@ import 'src/clock.dart';
 
 class FacebookLoginWeb {
   static const MethodChannel _channel =
-      const MethodChannel(//'com.roughike/flutter_facebook_login');
-          'flutter_facebook_login_web');
+      const MethodChannel('flutter_facebook_login_web');
 
   Future<FacebookLoginResult> logIn(List<String> permissions) async {
-    var map = await _channel.invokeMethod('login', {
+    Map map = await _channel.invokeMethod('login', {
       'permissions': permissions,
     });
 
-    return FacebookLoginResult._(map);
+    return FacebookLoginResult._(map.cast<String, dynamic>());
   }
 
   Future testApi() async {
